@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Finder — search books using Open Library API">
+  <title>Book Finder | Lab 6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><div class="container"><p class="eyebrow">LAB 6 · REST API CLIENT</p><h1>📚 Book Finder</h1><p>Discover books, explore details, and find your next read.</p></div></header>
+  <main class="container">
+    <form id="searchForm" class="search" role="search"><label for="searchInput">Search for a book</label><div class="search-row"><input id="searchInput" type="search" placeholder="Try Harry Potter or Sherlock Holmes" value="Harry Potter" required minlength="2"><button type="submit">Search</button></div></form>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section aria-labelledby="resultsHeading"><h2 id="resultsHeading">Search results</h2><div id="results" class="grid"></div></section>
+    <section id="details" class="details" aria-labelledby="detailsHeading" hidden><h2 id="detailsHeading">Book details</h2><div id="detailsContent"></div></section>
+    <section class="extras" aria-labelledby="extrasHeading"><h2 id="extrasHeading">Explore two lists at once</h2><p>Loads two book searches in parallel using <code>Promise.all</code>.</p><button id="compareBtn" type="button">Load fantasy + science</button><div id="parallelResults" class="parallel-grid"></div></section>
+  </main>
+  <footer>Made for Lab 6 · Open Library API · Vanilla JavaScript</footer>
+</body>
+</html>
